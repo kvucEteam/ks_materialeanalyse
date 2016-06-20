@@ -1,0 +1,61 @@
+
+h4 {
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+
+#DataInput > .col-xs-12{
+	padding-left: 0px;
+}
+
+.leftCol, .rightCol {
+	/*border: 1px solid #666;*/
+	/*height: 130px;*/
+	/*min-height: 130px;*/
+	margin-bottom: 20px;
+}
+
+.leftCol{
+	padding-left: 0px;
+}
+
+.studentInput{
+	width: 100%;
+	/*height: 128px;*/
+	/*min-height: 126px;*/
+	/*min-height: 126px;*/
+}
+
+.borderBottom{
+	border-bottom: initial;
+}
+
+#dataTable {
+	/*border: 1px solid #666;*/
+}
+
+.freeHeight{ /* This class is given to tags with classes: "leftCol", "rightCol" and "studentInput" if width < md, and removed if width >= md */ 
+	height: initial;
+}
+
+.description {
+	color: #666;
+	/*margin-bottom: 20px;*/
+}
+
+.rightCol{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+#dataTable textarea {
+	position: relative;
+	top: 1px;
+
+    /*resize: none;*/   /* Does not work in IE, see: http://www.w3schools.com/cssref/css3_pr_resize.asp */
+    border: none;
+
+    padding: 10px;
+    /*background-color: #f8f8f6;*/
+}

@@ -1,0 +1,60 @@
+{
+	"mainHeader" : "Arbejd med teksten",
+	"instruction" : "Skabelonen hjælper dig med den grundlæggende analyse af kilder og tekster i kultur- og samfundsfag. Udfyld felterne og download et worddokument, som du kan arbejde videre med.",
+	"templateData" : {
+		"source": {
+			"heading": "Kilde", 
+			"description": "Skriv tekstens titel (og genre/type)",
+			"placeholderTxt" : "Skriv tekstens titel her...", 
+			"value": ""
+		},			
+    	"sender":  {
+    		"heading": "Afsender", 
+    		"description": "Hvem har skrevet kilden og repræsenterer forfatteren en speciel interesse (i sagen)?", 
+    		"placeholderTxt" : "Skriv tekstens afsender her...", 
+    		"value": ""
+    	}, 		
+    	"recipient": {
+    		"heading": "Modtager", 
+    		"description": "Hvornår er den skrevet og i hvilken sammenhæng?", 
+    		"placeholderTxt" : "Skriv tekstens modtager her...", 
+    		"value": ""
+    	}, 		
+    	"context":  {
+    		"heading": "Kontekst", 
+    		"description": "Hvem henvender kilden sig til?", 
+    		"placeholderTxt" : "Skriv tekstens kontekst her...", 
+    		"value": ""
+    	}, 		
+    	"message":  {
+    		"heading": "Besked", 
+    		"description": "Hvad er det vigtigste budskab i kilden og hvor kan du se det?", 
+    		"placeholderTxt" : "Skriv tekstens besked her...", 
+    		"value": ""
+    	}, 		
+    	"arguments":  {
+    		"heading": "Argumentation", 
+    		"description": "Med hvilke argumenter underbygger afsenderen sit budskab?", 
+    		"placeholderTxt" : "Skriv tekstens argumaentation her...", 
+    		"value": ""
+    	},		
+    	"purpose":  {
+    		"heading": "Formål", 
+    		"description": "Hvad vil afsenderen opnå med kilden? ", 
+    		"placeholderTxt" : "Skriv tekstens formål her...", 
+    		"value": ""
+    	}, 		
+    	"representative":  {
+    		"heading": "Repræsentativ", 
+    		"description": "Hvem taler kilden på vegne af? Repræsenterer kilden en udbredt holdning.", 
+    		"placeholderTxt" : "Skriv om teksten repræsentere en holdning her...", 
+    		"value": ""
+    	}, 
+    	"use":  {
+    		"heading": "Anvendelse", 
+    		"description": "Hvad kan vi bruge kilden til?", 
+    		"placeholderTxt" : "Skriv tekstens anvendelse her...", 
+    		"value": ""
+    	}			
+    }
+}
