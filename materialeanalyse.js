@@ -23,7 +23,7 @@ console.log('isUseragentSafari: ' + isUseragentSafari());
 
 function returnLastStudentSession() {
 	window.osc = Object.create(objectStorageClass);
-	osc.init('studentSession_3');
+	osc.init('studentSession_4');
 	osc.exist('jsonData');
 
 	var TjsonData = osc.load('jsonData');
