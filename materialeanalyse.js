@@ -197,6 +197,16 @@ function warnStudent(){
 }
 
 
+function dataHasBeenEntered() {
+	for (var n in jsonData.templateData){
+		if (jsonData.templateData[n].value.length > 0){
+			return true;
+		}
+	}
+	return false;
+}
+
+
 function detectBootstrapBreakpoints(){
     if (typeof(bootstrapBreakpointSize) === 'undefined') {
         console.log('detectBootstrapBreakpoints - bootstrapBreakpointSize defined.');
@@ -309,14 +319,18 @@ function wordTemplate() {
 
 $( document ).on('focusout', "textarea", function(event){ 
 	saveJsonData();
-	osc.save('jsonData', jsonData);
+	if (dataHasBeenEntered()) {
+		osc.save('jsonData', jsonData);  // hasDataBeenEntered
+	}
 	console.log('focusout - textarea - jsonData: ' + JSON.stringify(jsonData));
 });
 
 
 $( window ).unload(function() {   // <---------------  This saves data if the page is closed or reloaded.
 	saveJsonData();
-	osc.save('jsonData', jsonData);
+	if (dataHasBeenEntered()) {
+		osc.save('jsonData', jsonData);
+	}
 	console.log('unload - jsonData: ' + JSON.stringify(jsonData));
 	// confirm('unload - jsonData: ' + JSON.stringify(jsonData));
 });
