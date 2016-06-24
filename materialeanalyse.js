@@ -239,7 +239,7 @@ $( document ).on('click', "#download", function(event){
 
 		var converted = htmlDocx.asBlob(HTML);
 	    console.log("download - converted: " + JSON.stringify(converted));
-		saveAs(converted, 'Min synopsis.docx');
+		saveAs(converted, 'Min materialeanalyse.docx');
 	}
 });
 
