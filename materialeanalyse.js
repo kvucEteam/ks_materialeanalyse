@@ -120,6 +120,7 @@ function template() {
 	HTML += makeTable();
 
 	HTML += '<span id="download" class="btn btn-lg btn-primary"><span class="glyphicons glyphicons-download-alt"></span> Download</span>';
+	HTML += '<span id="copy" class="btn btn-lg btn-primary"><span class="glyphicons glyphicons-notes-2"></span>Kopier</span>';
 
 	$('#DataInput').html(HTML);
 }
@@ -244,6 +245,22 @@ $( document ).on('click', "#download", function(event){
 });
 
 
+$( document ).on('click', "#copy", function(event){
+
+	saveJsonData();
+
+	if (!warnStudent()){
+
+		var HTML = wordTemplate();
+
+		// Inspiration for the following solution: http://stackoverflow.com/questions/11965087/open-a-new-tab-window-and-write-something-to-it
+		var newTab = window.open("data:text/html," + encodeURIComponent(HTML), "_blank");
+		newTab.focus();
+	}
+
+});
+
+
 // This function replaces all "???" wildcards in strToReplace with the corrosponding "num" value translated into a string-word (between zero and twenty)
 function replaceWildcard(strToReplace, num){
 	// var numArray = ['nul','en','to','tre','fire','fem','seks','syv','otte','ni','ti','elleve','tolv','tretten','fjorten','femten','seksten','sytten','atten','nitten','tyve'];
@@ -271,7 +288,7 @@ function wordTemplate() {
 	HTML += 	'<head>';
 	HTML += 	'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';  // Fixes issue with danish characters on Internet Explore 
 	HTML += 		'<style type="text/css">';
-	HTML += 			'body {font-family: arial}';
+	HTML += 			'body {font-family: arial; padding: 50px;}';
 	HTML += 			'h1 {}';
 	HTML += 			'h2 {}';
 	HTML += 			'h3 {color: #333}';
