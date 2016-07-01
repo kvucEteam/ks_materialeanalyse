@@ -4,7 +4,7 @@
 	"templateData" : {
 		"source": {
 			"heading": "Kilde", 
-			"description": "Skriv tekstens titel (og genre/type)",
+			"description": "Skriv tekstens titel og genre/type",
 			"placeholderTxt" : "Skriv tekstens titel her...", 
 			"value": ""
 		},			
@@ -16,13 +16,13 @@
     	}, 		
     	"recipient": {
     		"heading": "Modtager", 
-    		"description": "Hvornår er den skrevet og i hvilken sammenhæng?", 
+    		"description": "Hvem henvender kilden sig til?", 
     		"placeholderTxt" : "Skriv tekstens modtager her...", 
     		"value": ""
     	}, 		
     	"context":  {
     		"heading": "Kontekst", 
-    		"description": "Hvem henvender kilden sig til?", 
+    		"description": "Hvornår er den skrevet og i hvilken sammenhæng?", 
     		"placeholderTxt" : "Skriv tekstens kontekst her...", 
     		"value": ""
     	}, 		
@@ -46,7 +46,7 @@
     	}, 		
     	"representative":  {
     		"heading": "Repræsentativ", 
-    		"description": "Hvem taler kilden på vegne af? Repræsenterer kilden en udbredt holdning.", 
+    		"description": "Hvem taler kilden på vegne af? Repræsenterer kilden en udbredt holdning?", 
     		"placeholderTxt" : "Skriv om teksten repræsentere en holdning her...", 
     		"value": ""
     	}, 
