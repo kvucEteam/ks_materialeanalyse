@@ -1,6 +1,6 @@
 {
 	"mainHeader" : "Arbejd med teksten",
-	"instruction" : "Skabelonen hjælper dig med den grundlæggende analyse af kilder og tekster i kultur- og samfundsfag. Udfyld felterne og download et worddokument, som du kan arbejde videre med.",
+	"instruction" : "Udfyld felterne og download et worddokument, som du kan arbejde videre med. Skabelonen hjælper dig med den grundlæggende analyse af kilder og tekster i kultur- og samfundsfag.",
 	"templateData" : {
 		"source": {
 			"heading": "Kilde", 
@@ -27,9 +27,9 @@
     		"value": ""
     	}, 		
     	"message":  {
-    		"heading": "Besked", 
+    		"heading": "Budskab", 
     		"description": "Hvad er det vigtigste budskab i kilden og hvor kan du se det?", 
-    		"placeholderTxt" : "Skriv tekstens besked her...", 
+    		"placeholderTxt" : "Skriv tekstens budskab her...", 
     		"value": ""
     	}, 		
     	"arguments":  {

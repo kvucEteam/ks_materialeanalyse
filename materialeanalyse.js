@@ -116,6 +116,7 @@ function template() {
 
 	HTML += '<h1>'+jsonData.mainHeader+'</h1>';
 	HTML += '<div class="col-xs-12 col-md-8">'+instruction(jsonData.instruction)+'</div><div class="clear"></div>';
+	// HTML += explanation(jsonData.explanation);
 
 	HTML += makeTable();
 
