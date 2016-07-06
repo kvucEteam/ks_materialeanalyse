@@ -246,6 +246,12 @@ $( document ).on('click', "#download", function(event){
 });
 
 
+// Forceing "utf-8" on the the new javascript window by window.open() command might not work in all browsers - therfore we
+// replace all danish chars with the HTML-equivalent.
+function replaceDanishChars(str) {
+    return String(str).replace(/æ/g, '&oelig;').replace(/ø/g, '&oslash;').replace(/å/g, '&aring;').replace(/Æ/g, '&AElig;').replace(/Ø/g, '&Oslash;').replace(/Å/g, '&Aring;');
+}
+
 $( document ).on('click', "#copy", function(event){
 
 	saveJsonData();
@@ -253,6 +259,8 @@ $( document ).on('click', "#copy", function(event){
 	if (!warnStudent()){
 
 		var HTML = wordTemplate();
+
+		HTML = replaceDanishChars(HTML);
 
 		// Inspiration for the following solution: http://stackoverflow.com/questions/11965087/open-a-new-tab-window-and-write-something-to-it
 		var newTab = window.open("data:text/html," + encodeURIComponent(HTML), "_blank");
@@ -287,7 +295,7 @@ function wordTemplate() {
 	HTML += '<!DOCTYPE html>';
 	HTML += '<html>';
 	HTML += 	'<head>';
-	HTML += 	'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';  // Fixes issue with danish characters on Internet Explore 
+	HTML += 	'<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />';  // Fixes issue with danish characters on Internet Explore 
 	HTML += 		'<style type="text/css">';
 	HTML += 			'body {font-family: arial; padding: 50px;}';
 	HTML += 			'h1 {}';
