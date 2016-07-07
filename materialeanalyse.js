@@ -258,15 +258,44 @@ $( document ).on('click', "#copy", function(event){
 
 	if (!warnStudent()){
 
-		var HTML = wordTemplate();
+		var wordHTML = wordTemplate();
 
-		HTML = replaceDanishChars(HTML);
+		var HTML = '<div id="wordOutput">';
 
-		// Inspiration for the following solution: http://stackoverflow.com/questions/11965087/open-a-new-tab-window-and-write-something-to-it
-		var newTab = window.open("data:text/html," + encodeURIComponent(HTML), "_blank");
-		newTab.focus();
+		HTML += wordHTML.split('<body>')[1].split('</body>')[0];
+
+		HTML += '<span id="BackToForm" class="btn btn-lg btn-primary">Tilbage til skabelonen</span>';
+
+		HTML += '</div>';
+
+		console.log('copy - HTML: ' + HTML);
+
+		// HTML = HTML.replace('</body>', '<div><span class="btn btn-lg btn-primary">Tilbage til skabelonen</span></div></body>');
+
+		$('body').append(HTML);
+		$('#wordOutput').hide();
+		$('.container-fluid').hide();
+		// $('#wordOutput').show();
+		$( '#wordOutput' ).fadeIn( "slow");
+		
+		
+
+		// HTML = replaceDanishChars(HTML);
+
+		// // Inspiration for the following solution: http://stackoverflow.com/questions/11965087/open-a-new-tab-window-and-write-something-to-it
+		// // http://stackoverflow.com/questions/3030859/detecting-the-onload-event-of-a-window-opened-with-window-open
+		// var newTab = window.open("data:text/html," + encodeURIComponent(HTML), "_blank");
+		// newTab.focus();
 	}
 
+});
+
+
+
+$( document ).on('click', "#BackToForm", function(event){
+	$('#wordOutput').hide();
+	$( '.container-fluid' ).fadeIn( "slow");
+	// window.scrollTo(0, 0);
 });
 
 
