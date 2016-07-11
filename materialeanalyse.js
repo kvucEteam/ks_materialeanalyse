@@ -293,7 +293,7 @@ $( document ).on('click', "#copy", function(event){
 
 
 $( document ).on('click', "#BackToForm", function(event){
-	$('#wordOutput').hide();
+	$('#wordOutput').remove();
 	$( '.container-fluid' ).fadeIn( "slow");
 	// window.scrollTo(0, 0);
 });
