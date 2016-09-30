@@ -381,7 +381,8 @@ $( document ).on('focusout', "textarea", function(event){
 });
 
 
-$( window ).unload(function() {   // <---------------  This saves data if the page is closed or reloaded.
+// $( window ).unload(function() {   // <---------------  This saves data if the page is closed or reloaded. Removed from JQuery 3.0...
+window.addEventListener("beforeunload", function (event) {  // <-----  This saves data if the page is closed or reloaded.
 	saveJsonData();
 	if (dataHasBeenEntered()) {
 		osc.save('jsonData', jsonData);
