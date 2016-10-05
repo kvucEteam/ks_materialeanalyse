@@ -16,7 +16,9 @@ function isUseragentSafari(){
 	
 	// return (navigator.userAgent.indexOf('Safari')!==-1)?true:false;
 
-	return Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;   // SEE:  https://jsfiddle.net/9atsffau/ 
+	// return Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;   // SEE:  https://jsfiddle.net/9atsffau/  // Commented out 05-10-2016
+
+	return ((navigator.userAgent.indexOf('Safari')!==-1) && (navigator.userAgent.indexOf('Chrome')===-1) && (navigator.userAgent.indexOf('Chromium')===-1))?true:false;  // Added 05-10-2016, see: https://developer.mozilla.org/en-US/docs/Web/HTTP/Browser_detection_using_the_user_agent
 }
 console.log('isUseragentSafari: ' + isUseragentSafari());
 
