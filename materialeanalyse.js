@@ -117,7 +117,8 @@ function template() {
 	console.log('template - jsonData: ' + JSON.stringify(jsonData)); 
 
 	HTML += '<h1>'+jsonData.mainHeader+'</h1>';
-	HTML += '<div class="col-xs-12 col-md-8">'+instruction(jsonData.instruction)+'</div><div class="clear"></div>';
+	// HTML += '<div class="col-xs-12 col-md-8">'+instruction(jsonData.instruction)+'</div><div class="clear"></div>';  // Commented out 9/11-2016
+	HTML += instruction(jsonData.instruction);    																		// Added 9/11-2016
 	// HTML += explanation(jsonData.explanation);
 
 	HTML += makeTable();
