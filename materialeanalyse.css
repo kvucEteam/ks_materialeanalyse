@@ -6,7 +6,7 @@ h4 {
 
 
 #DataInput > .col-xs-12{
-	padding-left: 0px;
+	/*padding-left: 0px;*/  /*Commented out 9/11-2016*/
 }
 
 .leftCol, .rightCol {
