@@ -241,6 +241,10 @@ $( document ).on('click', "#download", function(event){
 	if (!warnStudent()){
 
 		var HTML = wordTemplate();
+		console.log("download - HTML: " + HTML);
+
+		// HTML = '<h1>TEST</h1> <p>Dette er en test!</p>';
+		// console.log("download - HTML-TEST: " + HTML);
 
 		var converted = htmlDocx.asBlob(HTML);
 	    console.log("download - converted: " + JSON.stringify(converted));
@@ -327,7 +331,7 @@ function wordTemplate() {
 	HTML += '<!DOCTYPE html>';
 	HTML += '<html>';
 	HTML += 	'<head>';
-	HTML += 	'<meta http-equiv="Content-Type" content="text/html; charset="utf-8" />';  // Fixes issue with danish characters on Internet Explore 
+	HTML += 	'<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />';  // Fixes issue with danish characters on Internet Explore 
 	HTML += 		'<style type="text/css">';
 	HTML += 			'body {font-family: arial; padding: 50px;}';
 	HTML += 			'h1 {}';
