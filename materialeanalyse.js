@@ -235,23 +235,23 @@ function detectBootstrapBreakpoints(){
 }
 
 // COMMENTED OUT 29/1-2018
-$( document ).on('click', "#download", function(event){
+// $( document ).on('click', "#download", function(event){
 
-	saveJsonData();
+// 	saveJsonData();
 
-	if (!warnStudent()){
+// 	if (!warnStudent()){
 
-		var HTML = wordTemplate();
-		console.log("download - HTML: " + HTML);
+// 		var HTML = wordTemplate();
+// 		console.log("download - HTML: " + HTML);
 
-		// HTML = '<h1>TEST</h1> <p>Dette er en test!</p>';
-		// console.log("download - HTML-TEST: " + HTML);
+// 		// HTML = '<h1>TEST</h1> <p>Dette er en test!</p>';
+// 		// console.log("download - HTML-TEST: " + HTML);
 
-		var converted = htmlDocx.asBlob(HTML);
-	    console.log("download - converted: " + JSON.stringify(converted));
-		saveAs(converted, 'Min materialeanalyse.docx');
-	}
-});
+// 		var converted = htmlDocx.asBlob(HTML);
+// 	    console.log("download - converted: " + JSON.stringify(converted));
+// 		saveAs(converted, 'Min materialeanalyse.docx');
+// 	}
+// });
 
 
 
@@ -260,7 +260,7 @@ $( document ).on('click', "#download", function(event){
 function download() {  
 	var HTML = '';
 	HTML += '<form action="htmlToWord.php" method="post">';
-    HTML += 	'<input type="hidden" name="fileName" id="hiddenField" value="Min introducerende artikel" />';
+    HTML += 	'<input type="hidden" name="fileName" id="hiddenField" value="Min materialeanalyse" />';
     HTML += 	'<input id="html" type="hidden" name="html" id="hiddenField" />';
     HTML += 	'<input id="submit" type="submit" class="btn btn-info" value="Konverter" onclick="clearInterval(downloadTimer);">';  // <---- NOTE: The "downloadTimer" is cleared here!
     HTML += '</form>';
